@@ -1,7 +1,7 @@
 Leaflet.zoomdisplay
 ===================
 
-Leflet.zoomdisplay is a plugin that displays the current zoom level of the map.
+Leaflet.zoomdisplay is a plugin that displays the current zoom level of the map.
 
 ## Usage
 
