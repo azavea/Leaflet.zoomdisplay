@@ -1,0 +1,37 @@
+{
+  "name": "leaflet.zoomdisplay",
+  "version": "1.0.0",
+  "description": "Leaflet.zoomdisplay is a plugin that displays the current zoom level of the map",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "babel": "babel src --out-file dist/leaflet.zoomdisplay-src.js",
+    "minify": "babel dist/leaflet.zoomdisplay-src.js --out-file dist/leaflet.zoomdisplay.js --minified",
+    "copy-css": "copyfiles -u 1 src/leaflet.zoomdisplay.css dist",
+    "build": "npm run babel && npm run copy-css && npm run minify",
+    "watch": "onchange -i -j5 src -- npm run build",
+    "start": "npm run watch && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azavea/Leaflet.zoomdisplay.git"
+  },
+  "author": "azavea",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/azavea/Leaflet.zoomdisplay/issues"
+  },
+  "homepage": "https://github.com/azavea/Leaflet.zoomdisplay#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "onchange": "^6.1.0"
+  },
+  "dependencies": {
+    "copyfiles": "^2.1.1"
+  }
+}
